@@ -1,0 +1,64 @@
+body {
+  background-color: #282c34;
+}
+
+.App {
+  display: flex;
+  padding: 2rem;
+}
+
+.content {
+  background-color: #fff;
+  border-radius: 10px;
+  height: 6000px;
+  text-align: center;
+  width: calc(100% - 300px - 1rem); /*could also use flex-basis*/
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  /* justify-content: space-between; */ /* Lulu corrected me, this is unnecessary as flex grow spaces things evenly by default: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax  (see the flex-grow section) */
+  margin-left: 1rem;
+  width: calc(300px + 1rem); /*could also use flex-basis*/
+}
+
+.sidebar--item {
+  flex-grow: 1;
+  margin: 0.5rem 0;
+}
+.sidebar--item:first-child {
+  margin-top: 0;
+}
+.sidebar--item:last-child {
+  margin-bottom: 0;
+}
+.item {
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 10px;
+  height: 300px;
+  position: sticky;
+  top: 1rem;
+  width: 300px;
+}
+
+.item-1 {
+  background: blue;
+  height: 600px;
+}
+.item-2 {
+  background: red;
+}
+.item-3 {
+  background: orange;
+  height: 200px;
+}
+.item-4 {
+  background: green;
+}
+.item-5 {
+  background: purple;
+  height: 400px
+}
